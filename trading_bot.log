@@ -1,0 +1,20 @@
+2026-03-08 04:51:48,983 - __main__ - ERROR - Validation error: Invalid side 'LONG'. Must be BUY or SELL
+2026-03-08 04:56:48,248 - __main__ - ERROR - Validation error: Price is required and must be positive for LIMIT orders
+2026-03-08 05:00:14,356 - bot.client - INFO - Connected to Binance Futures Testnet (server time: 1772926213674)
+2026-03-08 05:00:14,356 - bot.orders - INFO - Sending order request: {'symbol': 'BTCUSD', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+2026-03-08 05:00:14,534 - bot.orders - ERROR - Binance API error: [-1121] Invalid symbol.
+2026-03-08 05:00:14,535 - __main__ - ERROR - Unexpected error: APIError(code=-1121): Invalid symbol.
+2026-03-08 05:03:50,165 - bot.client - INFO - Connected to Binance Futures Testnet (server time: 1772926429483)
+2026-03-08 05:03:50,167 - bot.orders - INFO - Sending order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.01, 'price': 80000.0, 'timeInForce': 'GTC'}
+2026-03-08 05:03:50,645 - bot.orders - ERROR - Binance API error: [-4016] Limit price can't be higher than 70709.95.
+2026-03-08 05:03:50,645 - __main__ - ERROR - Unexpected error: APIError(code=-4016): Limit price can't be higher than 70709.95.
+2026-03-08 05:08:12,135 - bot.client - INFO - Connected to Binance Futures Testnet (server time: 1772926691453)
+2026-03-08 05:08:12,136 - bot.orders - INFO - Sending order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+2026-03-08 05:08:12,365 - bot.orders - INFO - Order response: orderId=12687224077 status=NEW executedQty=0.000 avgPrice=0.00
+2026-03-08 05:09:06,144 - bot.client - INFO - Connected to Binance Futures Testnet (server time: 1772926745463)
+2026-03-08 05:09:06,145 - bot.orders - INFO - Sending order request: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 60000.0, 'timeInForce': 'GTC'}
+2026-03-08 05:09:06,325 - bot.orders - ERROR - Binance API error: [-4024] Limit price can't be lower than 63925.41.
+2026-03-08 05:09:06,325 - __main__ - ERROR - Unexpected error: APIError(code=-4024): Limit price can't be lower than 63925.41.
+2026-03-08 05:10:25,590 - bot.client - INFO - Connected to Binance Futures Testnet (server time: 1772926824890)
+2026-03-08 05:10:25,590 - bot.orders - INFO - Sending order request: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 67000.0, 'timeInForce': 'GTC'}
+2026-03-08 05:10:25,861 - bot.orders - INFO - Order response: orderId=12687256461 status=NEW executedQty=0.000 avgPrice=0.00
