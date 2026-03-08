@@ -168,7 +168,7 @@ All API requests, responses, and errors are logged to:
   Executed Qty : 0.01000
   Avg Price    : 87000.00
 
-  ✅ Order placed successfully!
+  Order placed successfully!
 ========================================
 ```
 

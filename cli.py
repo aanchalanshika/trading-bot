@@ -83,7 +83,7 @@ def main():
             "  python cli.py --symbol ETHUSDT --side SELL --type LIMIT --quantity 0.5 --price 2000\n"
             "  python cli.py --symbol BTCUSDT --side SELL --type STOP_LIMIT "
             "--quantity 0.01 --price 29000 --stop-price 29500\n"
-            "  python cli.py          (no args → interactive mode)"
+            "  python cli.py          (no args - interactive mode)"
         ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
