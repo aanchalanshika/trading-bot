@@ -18,3 +18,12 @@
 2026-03-08 05:10:25,590 - bot.client - INFO - Connected to Binance Futures Testnet (server time: 1772926824890)
 2026-03-08 05:10:25,590 - bot.orders - INFO - Sending order request: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 67000.0, 'timeInForce': 'GTC'}
 2026-03-08 05:10:25,861 - bot.orders - INFO - Order response: orderId=12687256461 status=NEW executedQty=0.000 avgPrice=0.00
+2026-03-08 05:27:14,139 - bot.client - INFO - Connected to Binance Futures Testnet (server time: 1772927833466)
+2026-03-08 05:27:14,139 - bot.orders - INFO - Sending order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+2026-03-08 05:27:14,420 - bot.orders - INFO - Order response: orderId=12687521590 status=NEW executedQty=0.000 avgPrice=0.00
+2026-03-08 05:30:21,696 - bot.client - INFO - Connected to Binance Futures Testnet (server time: 1772928021024)
+2026-03-08 05:30:21,697 - bot.orders - INFO - Sending order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+2026-03-08 05:30:22,242 - bot.orders - INFO - Order response: orderId=12687567761 status=NEW executedQty=0.000 avgPrice=0.00
+2026-03-08 11:18:29,956 - bot.client - INFO - Connected to Binance Futures Testnet (server time: 1772948909051)
+2026-03-08 11:18:29,958 - bot.orders - INFO - Sending order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01, 'type': 'MARKET'}
+2026-03-08 11:18:30,231 - bot.orders - INFO - Order response: orderId=12693051549 status=NEW executedQty=0.000 avgPrice=0.00

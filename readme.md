@@ -1,6 +1,6 @@
 # Binance Futures Testnet Trading Bot
 
-A simplified Python trading bot that places **Market** and **Limit** orders on [Binance Futures Testnet (USDT-M)](https://testnet.binancefuture.com).
+A Python trading bot that places **Market**, **Limit**, and **Stop-Limit** orders on [Binance Futures Testnet (USDT-M)](https://testnet.binancefuture.com), with an enhanced interactive CLI and colored output.
 
 ---
 
@@ -32,19 +32,52 @@ BINANCE_API_SECRET=your_api_secret_here
 
 ## How to Run
 
-### Place a Market Order
+### Option 1 — Interactive Mode (Recommended)
+
+Run with no arguments and the bot will ask you for each input one by one:
+
+```bash
+python cli.py
+```
+
+Example session:
+
+```
+============================================
+   BINANCE FUTURES TESTNET  —  TRADING BOT
+============================================
+
+  Symbol     (e.g. BTCUSDT)              : BTCUSDT
+  Side       (BUY / SELL)                : BUY
+  Order type (MARKET / LIMIT / STOP_LIMIT): MARKET
+  Quantity                                : 0.01
+```
+
+---
+
+### Option 2 — Flag Mode (One-liner)
+
+#### Place a Market Order
 
 ```bash
 python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.01
 ```
 
-### Place a Limit Order
+#### Place a Limit Order
 
 ```bash
 python cli.py --symbol ETHUSDT --side SELL --type LIMIT --quantity 0.5 --price 2000
 ```
 
-### View Help
+#### Place a Stop-Limit Order
+
+```bash
+python cli.py --symbol BTCUSDT --side SELL --type STOP_LIMIT --quantity 0.01 --price 29000 --stop-price 29500
+```
+
+> A Stop-Limit order means: **if** BTC price hits `--stop-price` (29500), **then** place a limit order at `--price` (29000).
+
+#### View Help
 
 ```bash
 python cli.py --help
@@ -54,13 +87,25 @@ python cli.py --help
 
 ## CLI Arguments
 
-| Argument     | Required | Description                                |
-|--------------|----------|--------------------------------------------|
-| `--symbol`   | Yes      | Trading pair (e.g., `BTCUSDT`, `ETHUSDT`)  |
-| `--side`     | Yes      | `BUY` or `SELL`                            |
-| `--type`     | Yes      | `MARKET` or `LIMIT`                        |
-| `--quantity` | Yes      | Order quantity (positive number)           |
-| `--price`    | LIMIT    | Required for LIMIT orders                  |
+| Argument        | Required        | Description                                         |
+|-----------------|-----------------|-----------------------------------------------------|
+| `--symbol`      | Yes             | Trading pair (e.g., `BTCUSDT`, `ETHUSDT`)           |
+| `--side`        | Yes             | `BUY` or `SELL`                                     |
+| `--type`        | Yes             | `MARKET`, `LIMIT`, or `STOP_LIMIT`                  |
+| `--quantity`    | Yes             | Order quantity (positive number)                    |
+| `--price`       | LIMIT/STOP_LIMIT| Limit price for LIMIT and STOP_LIMIT orders         |
+| `--stop-price`  | STOP_LIMIT      | Stop trigger price — activates the limit order      |
+
+> **Tip:** Omit all arguments to launch **interactive mode** which prompts you for each field.
+
+---
+
+## Enhanced CLI Features
+
+- **Interactive mode** — run `python cli.py` with no flags for a guided prompt
+- **Colored output** — BUY shown in green, SELL in red, errors highlighted in red
+- **Stop-Limit orders** — third order type using `--type STOP_LIMIT` with `--price` and `--stop-price`
+- **Clear error messages** — validation errors show exactly what went wrong
 
 ---
 
