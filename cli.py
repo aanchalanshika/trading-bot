@@ -107,7 +107,7 @@ def main():
             sys.exit(0)
     else:
         if not all([args.symbol, args.side, args.type, args.quantity]):
-            print(red("  ❌  --symbol, --side, --type, and --quantity are all required."))
+            print(red("  ERROR: --symbol, --side, --type, and --quantity are all required."))
             parser.print_help()
             sys.exit(1)
         symbol     = args.symbol
@@ -159,22 +159,22 @@ def main():
         print(f"  Status       : {green(order.get('status', 'N/A'))}")
         print(f"  Executed Qty : {order.get('executedQty')}")
         print(f"  Avg Price    : {order.get('avgPrice', 'N/A')}")
-        print(f"\n  {green('✅  Order placed successfully!')}")
+        print(f"\n  {green('Order placed successfully.')}")
         print(bold(cyan("=" * 44)))
 
     except ValueError as e:
         logger.error("Validation error: %s", e)
-        print(f"\n  {red('❌  Validation Error:')} {e}")
+        print(f"\n  {red('Validation Error:')} {e}")
         sys.exit(1)
 
     except ConnectionError as e:
         logger.error("Connection error: %s", e)
-        print(f"\n  {red('❌  Connection Error:')} {e}")
+        print(f"\n  {red('Connection Error:')} {e}")
         sys.exit(1)
 
     except Exception as e:
         logger.error("Unexpected error: %s", e)
-        print(f"\n  {red('❌  Error:')} {e}")
+        print(f"\n  {red('Error:')} {e}")
         sys.exit(1)
 
 
